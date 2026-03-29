@@ -11,6 +11,7 @@ from PyQt6.QtCore import Qt, QSize, QTimer, QThread, pyqtSignal
 
 from taskbar_icon import set_taskbar_icon
 from temp_path import resource_path
+from dark_titlebar import apply_dark_title_bar
 
 def natural_sort_key(s):
     return [int(text) if text.isdigit() else text.lower() for text in re.split(r'(\d+)', s)]
@@ -107,6 +108,7 @@ class ImageViewer(QMainWindow):
     def showEvent(self, event):
         """Window is shown for the first time"""
         super().showEvent(event)
+        apply_dark_title_bar(self)
         if not self._window_shown:
             self._window_shown = True
             # Force a resize event to ensure proper image scaling

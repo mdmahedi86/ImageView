@@ -1,0 +1,1 @@
+pyinstaller --noconfirm --onedir --windowed --icon "icon.ico" --name "ImageView" --version-file "version.txt" --add-data "icon.ico;." main.py
