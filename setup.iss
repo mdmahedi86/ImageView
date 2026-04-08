@@ -29,7 +29,7 @@ OutputDir=Output
 OutputBaseFilename=imageview_x64
 Compression=lzma
 SolidCompression=yes
-WizardStyle=modern
+WizardStyle=modern dynamic
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
